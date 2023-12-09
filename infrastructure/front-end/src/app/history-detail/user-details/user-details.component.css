@@ -1,0 +1,8 @@
+.uniform-size {
+    width: 200px;
+    height: 200px;
+    object-fit: fill; /* 保持图像的宽高比并裁剪多余的部分，防止图像变形 */
+}
+
+.col-content{
+    border: solid #8A58C5 2px;  /* 紫色边框 */}

@@ -1,0 +1,12 @@
+# Define a Kubernetes Service of type LoadBalancer to expose your Angular app
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-app-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80   # The port that the LoadBalancer will listen on
+      targetPort: 4200  # Replace with the port your Angular app listens on
+  selector:
+    app: angular-app

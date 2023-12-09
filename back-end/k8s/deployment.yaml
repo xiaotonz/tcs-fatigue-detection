@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcs-web-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tcs-web-app
+  template:
+    metadata:
+      labels:
+        app: tcs-web-app
+    spec:
+      containers:
+      - name: tcs-web-app
+        image: tcsfatigueacr.azurecr.io/tcs-web-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+        - name: acr-auth-new

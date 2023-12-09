@@ -1,0 +1,14 @@
+<ngx-gauge class="uniform-size"
+    [value]= "gaugeValue" 
+    [type]= "gaugeType" 
+    [label]= "gaugeLabel" 
+    [append]= "gaugeAppendText"
+    [thick]="25"
+    [cap]="'round'"
+    [animate]="true"
+    [thresholds]="thresholdConfig"
+    [duration]="500"
+    [markers]="markerConfig">
+    <ngx-gauge-label>Index</ngx-gauge-label>
+</ngx-gauge>
+

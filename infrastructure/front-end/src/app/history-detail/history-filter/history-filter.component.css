@@ -1,0 +1,36 @@
+.btn {
+    background-color: #8A58C5;
+    border: none;
+    color: #fff;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    background-color: #8A58C5;
+    box-shadow: none;
+}
+
+.record{
+    background-color: #8A58C5;
+    color:#fff;
+}
+
+.records-container {
+    height: 480px; /* or whatever height you'd like */
+    overflow-y: auto; /* This makes it scrollable vertically when content exceeds the height */
+}
+
+.record-img {
+    max-width: 100%;
+    height: 80px;
+}
+
+.record-info {
+    padding: 5px 0px;
+}
+
+.image-container {
+    display: flex;         /* Enable flexbox for this container */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;      /* Center items vertically */
+    padding: 5px 0px;
+}

@@ -1,0 +1,54 @@
+/* Styles for image size */
+.uniform-size {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* 保持图像的宽高比并裁剪多余的部分，防止图像变形 */
+}
+
+/* Styles for each column */
+.col-6 {
+    padding-left: 10px;    /* 左侧内边距 */
+    padding-right: 10px;   /* 右侧内边距 */
+    margin: 20px 0px;      /* 垂直外边距 */
+    display: flex;         /* 启用flex布局 */
+    flex-direction: column; /* 垂直方向 */
+    align-items: center;   /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+}
+
+/* Styles for the content inside each column */
+.col-content {
+    border: solid #8A58C5 2px;  /* 紫色边框 */
+    border-radius: 5px;    /* 轻微的圆角 */
+    height: 100%;
+}
+
+
+/* common-popup.css */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #8A58C5;
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: red; /* Change color on hover, if desired */
+}

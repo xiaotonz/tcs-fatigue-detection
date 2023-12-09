@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app-deployment
+spec:
+  replicas: 1   # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: angular-app
+  template:
+    metadata:
+      labels:
+        app: angular-app
+    spec:
+      containers:
+      - name: angular-app
+        image: tcsfatigueacr.azurecr.io/tcs_front_end:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 4200  # Replace with the port your Angular app listens on
+      imagePullSecrets:
+        - name: acr-auth-frontend

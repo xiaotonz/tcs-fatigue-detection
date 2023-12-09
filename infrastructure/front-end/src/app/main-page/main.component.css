@@ -1,0 +1,6 @@
+:host {
+    display: block; /* Ensure that the host element is block-level */
+    background-color: #444D67;
+    min-height: 100vh; /* Optional: to make sure it takes the full viewport height */
+}
+  

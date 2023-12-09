@@ -1,0 +1,6 @@
+<app-top-bar (shiftSelected)="onShiftSelected($event)"></app-top-bar>
+<hr>
+<app-home (notificationButtonClick)="showNotification()" [shiftNumber]="selectedShift"></app-home>
+<app-home2 (notificationButtonClick)="showNotification()" [shiftNumber]="selectedShift"></app-home2>
+<!-- <app-notification *ngIf="isNotificationVisible" (closeNotificationClick)="closeNotification()"></app-notification> -->
+<app-notification *ngIf="isNotificationVisible" [shiftNumber]="selectedShift" (closeNotificationClick)="closeNotification()"></app-notification>

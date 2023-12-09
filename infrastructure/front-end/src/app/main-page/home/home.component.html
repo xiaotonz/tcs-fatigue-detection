@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="col-content" (click)="toggleEmployeeDetails()">
+          <img src="/assets/user-regular.svg" alt="user" class="img-fluid uniform-size">
+      </div>
+      <h2>{{ employee.emp_id }}</h2>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="col-content">
+          <!-- <img [src]="employeeStatusImage" alt="status" class="img-fluid uniform-size status"> -->
+          <app-gauge-dashboard [gaugeValue]="GaugeValue"></app-gauge-dashboard>
+      </div>
+      <h2>{{ employeeStatusText | uppercase}}</h2>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="col-content">
+        <iframe [src]= "video1" frameborder="0" allowfullscreen allow="autoplay" class="img-fluid uniform-size"></iframe>
+      </div>
+      <h2>Cam 1</h2>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="col-content">
+        <iframe [src]= "video2" frameborder="0" allowfullscreen allow="autoplay" class="img-fluid uniform-size"></iframe>
+      </div>
+      <h2>Cam 2</h2>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="col-content">
+        <iframe [src]= "video3" frameborder="0" allowfullscreen allow="autoplay" class="img-fluid uniform-size"></iframe>
+      </div>
+      <h2>Cam 3</h2>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="col-content">
+        <iframe [src]= "video4" frameborder="0" allowfullscreen allow="autoplay" class="img-fluid uniform-size"></iframe>
+      </div>
+      <h2>Cam 4</h2>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showEmployeeDetails" class="popup">
+  <h4>Employee Details</h4>
+  <p>ID: {{ employee.emp_id }}</p>
+  <p>Name: {{ employee.emp_name }}</p>
+  <p>Position: {{ employee.emp_position }}</p>
+  <button class="close-btn" (click)="toggleEmployeeDetails()">✖</button>
+</div>

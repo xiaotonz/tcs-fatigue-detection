@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tcs-model-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80   # The port that the LoadBalancer will listen on
+      targetPort: 8000  # Replace with the port your Angular app listens on
+    - name: websocket
+      port: 8000   # The port dedicated for WebSocket traffic
+      targetPort: 8000  # Replace with the port your WebSocket endpoint listens on
+      protocol: TCP   # Specify the protocol explicitly as TCP for WebSocket
+  selector:
+    app: tcs-model

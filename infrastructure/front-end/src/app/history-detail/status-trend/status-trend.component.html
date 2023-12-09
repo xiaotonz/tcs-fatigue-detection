@@ -1,0 +1,17 @@
+<div class="status-trend-container mt-3">
+    <nav class="navbar" style="background-color: #8A58C5">
+        <div class="container-fluid justify-content-center">
+            <strong><a class="navbar-brand" style="color: white">Status Trend</a></strong>
+          </div>
+    </nav>
+    <div class="trend-chart">
+        <div class="chart-container">
+            <canvas id="MyChart"></canvas>
+        </div>
+    </div>
+    <div class="trend-info mx-4">
+        <div><strong>Not Fatigue: </strong> {{ notFatigueCount }}</div>
+        <div><strong>Fatigue: </strong> {{ fatigueCount }}</div>
+        <div><strong>Date: </strong>{{ dateRange }}</div>
+    </div>
+</div>

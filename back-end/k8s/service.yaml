@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tcs-web-app-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80   # The port that the LoadBalancer will listen on
+      targetPort: 3000 
+  selector:
+    app: tcs-web-app
